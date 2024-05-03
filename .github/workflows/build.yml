@@ -183,12 +183,6 @@ jobs:
           ccache -p  # Show config
           ccache -z  # Zero stats
 
-      - name: Use ccache on Debug builds only
-        if: inputs.build_type == 'Debug'
-        shell: bash
-        run: |
-          echo "CCACHE_VAR=ccache" >> $GITHUB_ENV
-
       - name: Set short version
         shell: bash
         run: |
