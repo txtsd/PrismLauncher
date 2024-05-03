@@ -131,6 +131,11 @@ jobs:
         with:
           submodules: "true"
 
+      - uses: rui314/setup-mold@v1
+        with:
+          mold-version: 2.31.0
+          make-default: true
+
       - name: "Setup MSYS2"
         if: runner.os == 'Windows' && matrix.msystem != ''
         uses: msys2/setup-msys2@v2
