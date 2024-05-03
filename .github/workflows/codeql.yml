@@ -12,6 +12,11 @@ jobs:
         with:
           submodules: 'true'
 
+      - uses: rui314/setup-mold@v1
+        with:
+          mold-version: 2.31.0
+          make-default: true
+
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
